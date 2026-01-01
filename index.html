@@ -1,129 +1,229 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>코코아체 배포</title>
-<style>
-body {
-    line-height: 1.7;
-    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
-    color: #253342;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폰트 이름 | 무료 다운로드</title>
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --primary-color: #6b6b6b;
+            --secondary-color: #555;
+            --accent-color: #F4BA55;
+            --accent2-color: #FE9DE7;
+            --accent3-color: #BACC75;
+            --bg-color: #fff;
+            --bg2-color: #ffcee8;
+            --section-bg: #fdf9f7;
+        }
 
-* {
-    box-sizing: content-box;
-}
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
 
-@font-face {
-    font-family: 'o_cocoartz';
-    src: url('https://blog.howeverina.studio/font/cocoartz.woff') format('woff');
-    font-weight: 400;
-    font-display: swap;
-    ascent-override: 80%;  /* 위쪽 여백 줄이기 */
-    descent-override: 20%; /* 아래쪽 여백 늘리기 */
-}
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-display: swap;
+        }
 
-@font-face {
-    font-family: 'g_cocoartz';
-    src: url('https://blog.howeverina.studio/font/Griun_Cocoartz-Rg.woff2') format('woff2');
-    font-weight: 400;
-    font-display: swap;
-    ascent-override: 80%;  /* 위쪽 여백 줄이기 */
-    descent-override: 20%; /* 아래쪽 여백 늘리기 */
-}
+        /* 폰트 설정 (실제 폰트 파일로 교체하세요) */
+        @font-face {
+            font-family: 'inadoong';
+            src: url('https://blog.howeverina.studio/font/Griun_InaDoongdoong-Rg.woff2') format('woff2'); /* 실제 경로 입력 */
+            font-weight: 700;
+            font-style: normal;
+        }
 
-@font-face {
-    font-family: 'g_cocoartz';
-    src: url('https://blog.howeverina.studio/font/Griun_DarkCocoartz-Rg.woff2') format('woff2');
-    font-weight: 700;
-    font-display: swap;
-    ascent-override: 80%;  /* 위쪽 여백 줄이기 */
-    descent-override: 20%; /* 아래쪽 여백 늘리기 */
-}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Pretendard', sans-serif; line-height: 1.6; color: var(--primary-color); background: var(--bg-color); }
 
-#text-wrapper {
-    width: 100%;
-    max-width: 640px;
-    margin: 50px auto;
-}
+        /* Layout */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 100px 0; }
 
-h1 {
-    font-family: 'g_cocoartz';
-    text-align: center;
-    color: white;
-}
+        /* Header */
+        header { padding: 20px 0; position: sticky; top: 0; background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); z-index: 100; border-bottom: 1px solid #eee; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'inadoong'; font-size: 1.5rem; font-weight: 800; cursor: pointer; }
+        .btn-download-sm { padding: 10px 20px; background: var(--accent-color); color: white; text-decoration: none; border-radius: 5px; font-weight: 600; }
+        
+        .title-2 {
+            font-family: 'inadoong';
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
 
-.o {
-    font-family: 'o_cocoartz';
-    font-size: 18px;
-    margin-bottom: 40px;
-    padding: 30px;
-    border-radius: 20px;
-    background-color: white;
-}
+        .paragraphs {
+            text-align: center;
+        }
 
-.g {
-    font-family: 'g_cocoartz';
-    font-size: 17.5px;
-    margin-bottom: 40px;
-    padding: 30px;
-    border-radius: 20px;
-    background-color: white;
-}
-.gd {
-    font-family: 'g_cocoartz';
-    font-size: 17.5px;
-    font-weight: 700;
-    margin-bottom: 40px;
-    padding: 30px;
-    border-radius: 20px;
-    background-color: white;
-}
+        .paragraphs p {
+            margin-bottom: 0.5rem;
+        }
 
+        /* Hero Section */
+        #hero { text-align: center; background: var(--section-bg); }
+        .hero-title { font-family: 'inadoong', sans-serif; font-size: 5rem; margin-bottom: 20px; color: var(--accent2-color);}
+        .hero-title span {color: var(--accent3-color) !important;}
+        .hero-desc { font-size: 1.2rem; color: var(--primary-color); margin-bottom: 40px; }
 
-.underline {
-    background-color: #ffd1ff;
-    padding: 5px;
-    border-radius: 7px;
-    color: white;
-}
+        /* Preview Section */
+        #preview { background: #fff; }
+        .controls { margin-bottom: 30px; display: flex; gap: 20px; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+        .preview-input { width: 100%; border: none; font-size: 3rem; font-family: 'inadoong', sans-serif; outline: none; min-height: 200px; resize: none; overflow: hidden; color: var(--primary-color);}
+        .size-slider { display: flex; align-items: center; gap: 10px; }
+        #fontSize {
+            appearance: none;
+            cursor: pointer;
+            outline: none;
+            width: 100%;
+            height: 1.5rem; /* thumb의 height와 일치 */
+            margin: 0; /* reset margin */
+            padding: 0; /* reset padding */
+            background-color: transparent;
+        }
 
-</style>
+        /* thumb */
+        #fontSize::-webkit-slider-thumb { /* Webkit 기반 브라우저 */
+            appearance: none;
+            width: 1.5rem; /* height와 일치 */
+            height: 1.5rem;
+            border: none;
+            border-radius: 50%;
+            background-color: var(--accent3-color);
+            transition: all 0.15s ease-in-out;
+            margin-top: calc((0.5rem - 1.5rem) * 0.5); /* calc((track의 height - thumb의 height) * 0.5) */
+        }
+        #fontSize::-moz-range-thumb { /* 파이어폭스 */
+            appearance: none;
+            width: 1.5rem; /* height와 일치 */
+            height: 1.5rem;
+            border: none;
+            border-radius: 50%;
+            background-color: var(--accent3-color);
+            transition: all 0.15s ease-in-out;
+        }
+
+        /* track */
+        #fontSize::-webkit-slider-runnable-track { /* Webkit 기반 브라우저 */
+            cursor: pointer;
+            width: 100%;
+            height: 0.5rem;
+            background-color: var(--bg2-color);
+            border-radius: 0.25rem;
+        }
+        #fontSize::-moz-range-track { /* 파이어폭스 */
+            cursor: pointer;
+            width: 100%;
+            height: 0.5rem;
+            background-color: var(--bg2-color);
+            border-radius: 0.25rem;
+        }
+
+        /* Features/Details */
+        #details { background: var(--section-bg); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .feature-card { padding: 30px; background: white; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .feature-card h3 { margin-bottom: 15px; }
+
+        /* Footer */
+        footer { padding: 50px 0; background: var(--accent-color); color: #fff; text-align: center; }
+        .license-tag { display: inline-block; padding: 5px 15px; background: var(--accent2-color); font-family: 'inadoong'; border-radius: 20px; margin-bottom: 20px; font-size: 0.9rem; color: white;}
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 3rem; }
+            .preview-input { font-size: 2rem; }
+        }
+    </style>
 </head>
 <body>
-    <div class="gradient-bg">
-        <div id="text-wrapper">
-        <h1>코코아체 배포</h1>
-            <div class="o">
-                <span class="underline">온글잎 코코아체 (v2022)</span>
-                <p>
-                    프리벳 가 4번지에 사는 더즐리 부부는 자신들이 정상적이라는 것을 아주 자랑스럽게 여기는 사람들이었다. 그들은 기이하거나 신비스러운 일과는 전혀 무관해 보였다. 아니, 그런 터무니없는 것은 도저히 참아 내지 못했다.
-                </p>
-                <p>
-                    더즐리 씨는 그루닝스라는 드릴 제작 회사의 중역이었다. 그는 목이 거의 없을 정도로 살이 뒤룩뒤룩 찐 몸집이 큰 사내로, 코밑에는 커다란 콧수염을 기르고 있었다. 더즐리 부인은 마른 체구에 금발이었고, 목이 보통 사람보다 두 배는 길어서, 담 너머로 고개를 쭉 빼고 이웃 사람들을 몰래 훔쳐보는 그녀의 취미에는 더없이 제격이었다.
-                </p>
+
+    <header>
+        <nav class="container">
+            <div class="logo">However Ina</div>
+            <a href="#download" class="btn-download-sm">다운로드</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h1 class="hero-title">그리운 <span>연이나 둥둥</span></h1>
+            <p class="hero-desc">아기자기하고 장난스러운 표정의 제목 및 썸네일용 서체</p>
+            <a href="https://blog.howeverina.studio/font/Griun_InaDoongdoong-Rg.ttf" class="btn-download-sm" id="download" style="padding: 15px 40px; font-size: 1.1rem;">지금 무료로 받기</a>
+        </div>
+    </section>
+
+
+    <section id="preview">
+        <div class="container">
+            <div class="controls">
+                <span>사용해 보기</span>
+                <div class="size-slider">
+                    <input type="range" id="fontSize" min="20" max="150" value="60">
+                    <span id="sizeVal">60px</span>
+                </div>
             </div>
-            <div class="g">
-                <span class="underline">그리운 코코아체 (v2025)</span>
-                <p>
-                    프리벳 가 4번지에 사는 더즐리 부부는 자신들이 정상적이라는 것을 아주 자랑스럽게 여기는 사람들이었다. 그들은 기이하거나 신비스러운 일과는 전혀 무관해 보였다. 아니, 그런 터무니없는 것은 도저히 참아 내지 못했다.
-                </p>
-                <p>
-                    더즐리 씨는 그루닝스라는 드릴 제작 회사의 중역이었다. 그는 목이 거의 없을 정도로 살이 뒤룩뒤룩 찐 몸집이 큰 사내로, 코밑에는 커다란 콧수염을 기르고 있었다. 더즐리 부인은 마른 체구에 금발이었고, 목이 보통 사람보다 두 배는 길어서, 담 너머로 고개를 쭉 빼고 이웃 사람들을 몰래 훔쳐보는 그녀의 취미에는 더없이 제격이었다.
-                </p>
-            </div>
-            <div class="gd">
-                <span class="underline">그리운 진한코코아체 (v2025)</span>
-                <p>
-                    프리벳 가 4번지에 사는 더즐리 부부는 자신들이 정상적이라는 것을 아주 자랑스럽게 여기는 사람들이었다. 그들은 기이하거나 신비스러운 일과는 전혀 무관해 보였다. 아니, 그런 터무니없는 것은 도저히 참아 내지 못했다.
-                </p>
-                <p>
-                    더즐리 씨는 그루닝스라는 드릴 제작 회사의 중역이었다. 그는 목이 거의 없을 정도로 살이 뒤룩뒤룩 찐 몸집이 큰 사내로, 코밑에는 커다란 콧수염을 기르고 있었다. 더즐리 부인은 마른 체구에 금발이었고, 목이 보통 사람보다 두 배는 길어서, 담 너머로 고개를 쭉 빼고 이웃 사람들을 몰래 훔쳐보는 그녀의 취미에는 더없이 제격이었다.
-                </p>
+            <textarea class="preview-input" id="previewText" spellcheck="false" placeholder="연로자 연소자 여러분 하이나! 연이나입니다."></textarea>
+        </div>
+    </section>
+
+
+    <section style="background-color: var(--bg2-color); ">
+        <div class="container">
+            <h2 class="title-2">기획 의도</h2>
+            <div class="paragraphs">
+                <p>유튜브 썸네일과 자막에 사용할 두께감 있는 폰트가 필요했습니다.<br>라이선스에 대한 고민을 줄이고자, 직접 폰트를 제작하기로 마음먹었습니다.<br>모든 글자를 다 그리지는 않고, '그리운'이라는 폰트 제작 서비스의 도움을 받았습니다.</p>
+                <p><b>그리운 연이나 둥둥</b>은 굵은 획을 묵직하고 두꺼운 베이스 소리에 비유한 폰트입니다.<br>한글 2,780자를 지원하여 일부 신조어나 닉네임 등을 표기하기는 어려울 수 있으나,<br>표준어는 거의 입력할 수 있습니다.</p>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section id="details">
+        <div class="container">
+            <div class="grid">
+                <div class="feature-card">
+                    <h3>폰트 구성</h3>
+                    <p>한글 2,780자, 영문 52자, 특수문자 53자로 구성되어 다양한 용도로 사용 가능합니다.</p>
+                </div>
+                <div class="feature-card" id="download">
+                    <h3>라이선스</h3>
+                    <span class="license-tag">Free License</span>
+                    <p>모든 사용 범위에서 자유롭게 사용 가능하며, 폰트 파일 개작, 수정, 판매는 금지됩니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 However Ina. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 라이브 프리뷰 텍스트 크기 조절
+        const fontSizeInput = document.getElementById('fontSize');
+        const previewText = document.getElementById('previewText');
+        const sizeVal = document.getElementById('sizeVal');
+
+        fontSizeInput.addEventListener('input', (e) => {
+            const size = e.target.value;
+            previewText.style.fontSize = size + 'px';
+            sizeVal.textContent = size + 'px';
+        });
+
+        // 텍스트 영역 자동 높이 조절
+        previewText.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        });
+    </script>
 </body>
 </html>
